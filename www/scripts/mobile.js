@@ -246,6 +246,7 @@
 		this.model.on('add',this.render,this);
 	},
 	render: function() {
+		alert("section view");
 		var self = this;
 		self.$el.html('');
 		_.each(this.model.models, function(headline ,i) {
@@ -283,6 +284,7 @@
 
 	},	
 	render: function() {
+		alert("sectionsview render");
 		this.$el.html(this.template(this.model.toJSON()));
 		var self = this;
 		_.each(this.model.models, function(section ,i) {			
