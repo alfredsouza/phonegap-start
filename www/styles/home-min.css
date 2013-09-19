@@ -60,6 +60,9 @@
 }
 
 table.dow_header, .section_header {
+	display: block;
+	width: 100%;
+	border-bottom: 1px solid #333;
 	padding-left:10px;
 	color:white;
 	/*background:url("http://moneypreview.turner.com:86/stcejorp/at/test/2012/1126/blue.png");*/
