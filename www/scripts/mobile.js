@@ -335,11 +335,12 @@ var settingsView = new SettingsView({el: $('#page')});
 
   var AppView = Backbone.View.extend({
     initialize: function() {
-	
+		alert("in app init");
 		var sectionAr = ['homepage', 'news', 'technology', 'pf', 'smbusiness', 'fortune', 'moneymag', 'economy', 'markets'];
 		sections.initializeSections(sectionAr);		
 		//sections.clearStorage();
 		sectionsView.render();
+		alert("after init");
     }
   
   
@@ -348,7 +349,7 @@ var settingsView = new SettingsView({el: $('#page')});
  
  $(document).ready(function() {
 
-
+ 	alert("before app init");
     var App = new AppView; 
 		
  });
