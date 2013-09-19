@@ -66,7 +66,9 @@
 		self = this;
 		console.log(this.get('url'));
 		var _url = "http://money.cnn.com" + this.get('url');
+		alert(_url);
 		$.get(_url, function ( data ) {	
+			alert(data);
 			//console.log(data);
 			//var jsonObj = JSON.parse(data);
 			//self._storeHeadlines(key, jsonObj);
