@@ -67,7 +67,7 @@
 		console.log(this.get('url'));
 		var _url = "http://money.cnn.com" + this.get('url');
 		alert(_url);
-		$.get(_url, function ( data ) {	
+		$.get(_url, {}, function ( data ) {	
 			alert(data);
 			//console.log(data);
 			//var jsonObj = JSON.parse(data);
@@ -113,7 +113,7 @@
 		var returnData;
 		if (typeof url == 'undefined') return;
 		var _url = url;
-		$.get(_url, function ( data ) {	
+		$.get(_url, {}, function ( data ) {	
 			//returnData = JSON.parse(data);	
 			returnData = data;			
 		});	
