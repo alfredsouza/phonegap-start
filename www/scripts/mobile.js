@@ -248,7 +248,6 @@
 		this.model.on('add',this.render,this);
 	},
 	render: function() {
-		alert("section view");
 		var self = this;
 		self.$el.html('');
 		_.each(this.model.models, function(headline ,i) {
@@ -286,7 +285,6 @@
 
 	},	
 	render: function() {
-		alert("sectionsview render");
 		this.$el.html(this.template(this.model.toJSON()));
 		var self = this;
 		_.each(this.model.models, function(section ,i) {			
@@ -339,7 +337,6 @@ var settingsView = new SettingsView({el: $('#page')});
 
   var AppView = Backbone.View.extend({
     initialize: function() {
-		alert("in app init");
 		var sectionAr = ['homepage', 'news', 'technology', 'pf', 'smbusiness', 'fortune', 'moneymag', 'economy', 'markets'];
 		sections.initializeSections(sectionAr);		
 		//sections.clearStorage();
@@ -352,8 +349,9 @@ var settingsView = new SettingsView({el: $('#page')});
 
  
  $(document).ready(function() {
+    $.support.cors                 = true;
+    $.mobile.allowCrossDomainPages = true;
 
- 	alert("before app init");
     var App = new AppView; 
 		
  });
