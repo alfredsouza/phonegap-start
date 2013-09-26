@@ -67,7 +67,9 @@
 		console.log(this.get('url'));
 		var _url = "http://money.cnn.com" + this.get('url');
 		alert(_url);
-		$.get(_url, {}, function ( data ) {	
+		$.ajax({
+		  url: _url,
+		}).done(function ( data ) {	
 			alert(data);
 			//console.log(data);
 			//var jsonObj = JSON.parse(data);
@@ -113,7 +115,10 @@
 		var returnData;
 		if (typeof url == 'undefined') return;
 		var _url = url;
-		$.get(_url, {}, function ( data ) {	
+		$.ajax({
+		  url: _url,
+		  async: false,
+		}).done(function ( data ) {	
 			//returnData = JSON.parse(data);	
 			returnData = data;			
 		});	
@@ -341,7 +346,7 @@ var settingsView = new SettingsView({el: $('#page')});
 		sections.initializeSections(sectionAr);		
 		//sections.clearStorage();
 		sectionsView.render();
-		alert("after init");
+
     }
   
   
