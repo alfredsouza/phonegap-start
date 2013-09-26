@@ -351,11 +351,13 @@ var settingsView = new SettingsView({el: $('#page')});
   
   
   });
-
+$( document ).bind( "mobileinit", function() {
+  // Make your jQuery Mobile framework configuration changes here!
+  $.support.cors                 = true;
+  $.mobile.allowCrossDomainPages = true;
+});
  
  $(document).ready(function() {
-    $.support.cors                 = true;
-    $.mobile.allowCrossDomainPages = true;
 
     var App = new AppView; 
 		
