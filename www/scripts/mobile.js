@@ -69,6 +69,7 @@
 		alert(_url);
 		$.ajax({
 		  url: _url,
+		  crossDomain: true,
 		}).done(function ( data ) {	
 			alert(data);
 			//console.log(data);
@@ -117,6 +118,7 @@
 		var _url = url;
 		$.ajax({
 		  url: _url,
+		  crossDomain: true,
 		  async: false,
 		}).done(function ( data ) {	
 			//returnData = JSON.parse(data);	
